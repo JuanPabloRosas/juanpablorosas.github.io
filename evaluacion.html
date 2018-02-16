@@ -6,30 +6,10 @@
    body{
    font-family: 'Mukta Mahee', sans-serif;
    }
+   td{
+    align:centered;
+   }
 </style>
-  <script>
-   $(document).ready(function() {
-
- CalcularTotal();
-
-});
-function CalcularTotal()
-{
-var totals = [0, 0, 0, 0, 0, 0, 0, 0];
- var $filas= $("#tabla td:not('.total, .nombre')");
-
-  $filas.each(function() {
-    $(this).find('td').each(function(i) {
-      if (i != 0)
-        totals[i - 1] += parseInt($(this).html());
-    });
-  });
-  $(".total td").each(function(i) {
-    if (i != 0)
-      $(this).html(totals[i - 1]);
-  });
-}
-  </script>
  </head>
  <header>
 <a href="index.html"><img src="home.png" alt="Smiley face" height="32" width="32"> </a>
