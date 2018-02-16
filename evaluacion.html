@@ -7,6 +7,29 @@
    font-family: 'Mukta Mahee', sans-serif;
    }
 </style>
+  <script>
+   $(document).ready(function() {
+
+ CalcularTotal();
+
+});
+function CalcularTotal()
+{
+var totals = [0, 0, 0, 0, 0, 0, 0, 0];
+ var $filas= $("#tabla td:not('.total, .nombre')");
+
+  $filas.each(function() {
+    $(this).find('td').each(function(i) {
+      if (i != 0)
+        totals[i - 1] += parseInt($(this).html());
+    });
+  });
+  $(".total td").each(function(i) {
+    if (i != 0)
+      $(this).html(totals[i - 1]);
+  });
+}
+  </script>
  </head>
  <header>
 <a href="index.html"><img src="home.png" alt="Smiley face" height="32" width="32"> </a>
@@ -87,7 +110,7 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <th>Total</th>
   </tr>
   <tr>
-    <td><a href="https://github.com/AlxPadilla/AlexPadilla">Alex Padilla</a></td>
+    <td class="nombre"><a href="https://github.com/AlxPadilla/AlexPadilla">Alex Padilla</a></td>
     <td></td>
     <td></td>
     <td></td>
@@ -95,10 +118,10 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td class="total"></td>
   </tr>
   <tr>
-    <td><a href="https://github.com/AxelLinan/AutomatasII">Axel Liñan</a></td>
+    <td class="nombre"><a href="https://github.com/AxelLinan/AutomatasII">Axel Liñan</a></td>
     <td></td>
     <td></td>
     <td></td>
@@ -107,9 +130,9 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td></td>
     <td></td>
 
-   <td></td>
+   <td class="total"></td>
   </tr><tr>
-    <td><a href="https://github.com/Carlos18Bernal/automatas2">Carlos Bernal </a></td>
+    <td class="nombre"><a href="https://github.com/Carlos18Bernal/automatas2">Carlos Bernal </a></td>
     <td></td>
     <td></td>
     <td></td>
@@ -118,9 +141,9 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td></td>
 
  <td></td>
-    <td></td>
+    <td class="total"></td>
   </tr><tr>
-    <td><a href="https://github.com/carliro1996/Evidencias">Carlos Martinez Mendoza</a></td>
+    <td class="nombre"><a href="https://github.com/carliro1996/Evidencias">Carlos Martinez Mendoza</a></td>
     <td></td>
     <td></td>
     <td></td>
@@ -128,9 +151,9 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td></td>
     <td></td>
  <td></td>
-    <td></td>
+    <td class="total"></td>
   </tr><tr>
-    <td><a href="https://github.com/DiegoSalvador21/automatas2.git">Diego Fernandez</a></td>
+    <td class="nombre"><a href="https://github.com/DiegoSalvador21/automatas2.git">Diego Fernandez</a></td>
     <td></td>
     <td></td>
     <td></td>
@@ -138,9 +161,9 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td></td>
  <td></td>
     <td></td>
-    <td></td>
+    <td class="total"></td>
   </tr><tr>
-    <td><a href="https://github.com/EliudCarranza96/Automatas-II/">Eliud Carranza </a></td>
+    <td class="nombre"><a href="https://github.com/EliudCarranza96/Automatas-II/">Eliud Carranza </a></td>
     <td></td>
     <td></td>
     <td></td>
@@ -148,9 +171,9 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td class="total"></td>
   </tr><tr>
-    <td><a href="https://github.com/GasparCruzM/Automatas-II.git">Gaspar Cruz</a></td>
+    <td class="nombre"><a href="https://github.com/GasparCruzM/Automatas-II.git">Gaspar Cruz</a></td>
     <td></td>
     <td></td>
     <td></td>
@@ -158,9 +181,9 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td class="total"></td>
   </tr><tr>
-    <td><a href="https://github.com/ChristiamIvan/automatasII.git">Ivan Rdz</a></td>
+    <td class="nombre"><a href="https://github.com/ChristiamIvan/automatasII.git">Ivan Rdz</a></td>
     <td></td>
     <td></td>
     <td></td>
@@ -168,9 +191,9 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td class="total"></td>
   </tr><tr>
-    <td><a href="https://github.com/adrexteria/automatas2">Jesus Adrian</a></td>
+    <td class="nombre"><a href="https://github.com/adrexteria/automatas2">Jesus Adrian</a></td>
     <td></td>
     <td></td>
     <td></td>
@@ -178,9 +201,9 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td class="total"></td>
   </tr><tr>
-    <td><a href="https://github.com/JulioGarcia69/Lenguajes-Automatas-II">Julio García</a></td>
+    <td class="nombre"><a href="https://github.com/JulioGarcia69/Lenguajes-Automatas-II">Julio García</a></td>
     <td></td>
     <td></td>
      <td></td>
@@ -188,9 +211,9 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td class="total"></td>
   </tr><tr>
-    <td><a href="https://github.com/trolluiz/LenguajesAutomatasII.git">Luis Dominguez</a></td>
+    <td class="nombre"><a href="https://github.com/trolluiz/LenguajesAutomatasII.git">Luis Dominguez</a></td>
     <td></td>
     <td></td>
     <td></td>
@@ -198,9 +221,9 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td class="total"></td>
   </tr><tr>
-    <td><a href="https://github.com/Yukippo/LenguajesyAutomatas-II.git">Magaly Leija</a></td>
+    <td class="nombre"><a href="https://github.com/Yukippo/LenguajesyAutomatas-II.git">Magaly Leija</a></td>
     <td></td>
     <td></td>
     <td></td>
@@ -208,9 +231,9 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td class="total"></td>
   </tr><tr>
-    <td><a href="https://github.com/MarioUriegas/Automatas-II">Mario Humberto Uriegas</a></td>
+    <td class="nombre"><a href="https://github.com/MarioUriegas/Automatas-II">Mario Humberto Uriegas</a></td>
     <td></td>
     <td></td>
     <td></td>
@@ -218,9 +241,9 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td class="total"></td>
   </tr><tr>
-    <td><a href="https://github.com/MauTamez/Automatas2">Mauricio Tamez</a></td>
+    <td class="nombre"><a href="https://github.com/MauTamez/Automatas2">Mauricio Tamez</a></td>
     <td></td>
     <td></td>
      <td></td>
@@ -228,9 +251,9 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td class="total"></td>
   </tr><tr>
-    <td><a href="https://github.com/MidoriyaD/LenguajeyAutomatas2">Rafa Salazar</a></td>
+    <td class="nombre"><a href="https://github.com/MidoriyaD/LenguajeyAutomatas2">Rafa Salazar</a></td>
     <td></td>
     <td></td>
     <td></td>
@@ -238,9 +261,9 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td class="total"></td>
   </tr><tr>
-    <td><a href="https://github.com/Sarahisanchez/Automatas-II.git">Sarahi Sanchez</a></td>
+    <td class="nombre"><a href="https://github.com/Sarahisanchez/Automatas-II.git">Sarahi Sanchez</a></td>
     <td></td>
      <td></td>
     <td></td>
@@ -248,9 +271,9 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td class="total"></td>
   </tr><tr>
-    <td><a href="https://github.com/nadyalerma/automatas-2">Nadya Hinojosa</a></td>
+    <td class="nombre"><a href="https://github.com/nadyalerma/automatas-2">Nadya Hinojosa</a></td>
     <td></td>
     <td></td>
      <td></td>
@@ -258,9 +281,9 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td class="total"></td>
   </tr><tr>
-    <td><a href="#">2.-</a></td>
+    <td class="nombre"><a href="#">2.-</a></td>
     <td></td>
     <td></td>
     <td></td>
@@ -268,9 +291,9 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td class="total"></td>
   </tr><tr>
-    <td><a href="#">3.-</a></td>
+    <td class="nombre"><a href="#">3.-</a></td>
     <td></td>
      <td></td>
     <td></td>
@@ -278,9 +301,9 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td class="total"></td>
   </tr><tr>
-    <td><a href="#">4.-</a></td>
+    <td class="nombre"><a href="#">4.-</a></td>
     <td></td>
      <td></td>
     <td></td>
@@ -288,7 +311,7 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td class="total"></td>
   </tr>
 </table>
 
