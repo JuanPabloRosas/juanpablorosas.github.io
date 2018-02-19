@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<html>
+<body>
+
+<h1>Proyecto 2</h1>
+<h2>Unidad 2 - Notación</h2>
+
+<h3>Parte 1 (10 puntos)</h3>
+<p>  Generación de una tabla de símbolos, debe contener las palabras reservadas que ustedes crean necesarias, digamos para su proyecto final y en caso de encontrar palabras que no están aun en la tabla debe agregarlas. 
+En pocas palabras tendrán que generar dos funciones
+</p>
+<ul>
+<li>Una de insertar  que recibirá el nombre y el tipo del token  ( <b><i>function agregar(nombre, tipo) </i></b>)</li> 
+<li>Una que revise si existe o no el token ( <b><i>function existe(nombre, tipo) </i></b>).</li>
+</ul>
+
+
+ <table align="center", style="border: 1px solid black; border-collapse: collapse;">
+  <tr style="font-size: 14px; border: 1px solid black;">
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Tipo</th>
+    <th>Tamaño</th>
+    <th>Valor</th>
+    <th>Ambito</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>x</td>
+    <td>Int</td>
+    <td>16</td>
+    <td>10</td>
+    <td>Local</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>+</td>
+    <td>Operador</td>
+    <td>-</td>
+    <td>-</td>
+    <td>Global</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>print</td>
+    <td>Reservada</td>
+    <td>-</td>
+    <td>-</td>
+    <td>Global</td>
+  </tr>
+</table> 
+
+<p>Deben ir imprimiendo: </p>
+<div style="width= 60%; background-color:black; color:white; ">
+	<pre>
+
+	IF ID >= CTE THEN 
+		ID := ID + ID / CTE 
+	ELSE 
+		ID := ID
+	</pre>
+</div>
+<p>Y despues esto, asignandole un valor: </p>
+<div style="width= 60%; background-color:black; color:white;  font-size:14px;">
+	<pre>
+
+	59 27 80 28 60 
+		27 85 27 70 27 73 28  
+	61 
+		27 85 27
+	</pre>
+</div>
+<p>Al final imprimen su tabla de símbolos inicial y la final , en el reporte enmarcan o resaltan de alguna manera los símbolos que se agregaron para mostrar una comparativa.</p>
+<p>Usen el siguiente código para probar:</p>
+<div style="width= 60%; background-color:black; color:white;  font-size:14px;">
+<pre>
+
+	import java.util.Scanner;
+
+	public class SumAll {
+    	public static void sumAll(int arr[]) {
+        	int sum = 0;
+        	for (int i = 0; i < arr.length; i++) {
+            	sum += arr[i];
+        	}
+        	System.out.println("Sum is : " + sum);
+    	}
+
+    	public static void main(String[] args) {
+        	int num;
+        	Scanner input = new Scanner(System.in);
+        	System.out.print("How many # you want to add : ");
+        	num = input.nextInt();
+        	int[] arr2 = new int[num];
+        	for (int i = 0; i < arr2.length; i++) {
+            	System.out.print("Enter Num" + (i + 1) + ": ");
+            	arr2[i] = input.nextInt();
+        	}
+        	sumAll(arr2);
+    	}
+
+	}
+</pre>
+</div>
+<h3>Parte 2 (10 puntos)</h3>
+<p>Generación una tabla de Cuádruplas para la siguiente operación</p>
+<pre  style="width= 60%; font-size:14px;">       a=(a+b)*c+3/(a+b)</pre>	
+
+<h3>Parte 3 (5 puntos extra)</h3>
+<p>Para puntos extra, genera la tabla de cuádruplas  para el siguiente bloque de código </p>
+<div style="width= 60%; background-color:black; color:white; font-size:14px;">
+<pre>
+
+	fac=1; 
+	for (i=0; i&lt;n; i++){
+		fac*=i+1;
+	} 
+
+</pre>
+</div>
+</body>
+</html>
