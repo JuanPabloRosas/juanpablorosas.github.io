@@ -14,6 +14,23 @@
     font-weight: bold;
    }
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+<script type="text/javascript">
+$(document).ready(function () {
+    $('tr').each(function () {
+        var sum = 0
+        $(this).find('.cal').each(function () {
+            var cal = $(this).text();
+            if (!isNaN(cal) && cal.length !== 0) {
+                sum += parseFloat(cal);
+            }
+        });
+        //set the value of currents rows sum to the total-combat element in the current row
+        $('.total', this).html(sum);
+    });
+});
+</script>
+
  </head>
  <header>
 <a href="index.html"><img src="home.png" alt="Smiley face" height="32" width="32"> </a>
@@ -24,39 +41,79 @@
 
 <table align="center" border="0">
   <tr>
-    <th  colspan="2">Forma de Evaluación</th>
+    <th  colspan="6">Forma de Evaluación</th>
   </tr>
   <tr>
     <th>Actividad</th>
+    <th>Unidad 1</th>
+    <th>Unidad 2</th>
+    <th>Unidad 3</th>
+    <th>Unidad 4</th>
     <th>Puntos Max.</th>
   </tr>
   <tr>
-    <td>Actividad 1</td>
-    <td>20</td>
+    <td>Proyecto 1</td>
+    <td>100%</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td class="puntos_p1">20</td>
   </tr>
   <tr>
-    <td>Actividad 2</td>
-    <td>20</td>
+    <td>Proyecto 2</td>
+    <td>0</td>
+    <td>50%</td>
+    <td>0</td>
+    <td>0</td>
+    <td class="puntos_p2">20</td>
   </tr>
   <tr>
-    <td>Actividad 3</td>
-    <td>20</td>
+    <td>Proyecto 3</td>
+    <td>0</td>
+    <td>0</td>
+    <td>50%</td>
+    <td>0</td>
+    <td class="puntos_p3">10</td>
   </tr>
   <tr>
-    <td>Actividad 4</td>
-    <td>20</td>
+    <td>Proyecto 4</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>20%</td>
+    <td class="puntos_p4">10</td>
   </tr>
   <tr>
     <td>Proyecto Final</td>
-    <td>30</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>50%</td>
+    <td class="puntos_pfinal">30</td>
   </tr>
   <tr>
-    <td>Exposicion de tema</td>
-    <td>15</td>
+    <td>Examen Medio Curso</td>
+    <td>0</td>
+    <td>50%</td>
+    <td>0</td>
+    <td>0</td>
+    <td class="puntos_e1">10</td>
   </tr>
   <tr>
-    <td>Examen</td>
-    <td>15</td>
+    <td>Examen Final</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>30%</td>
+    <td class="puntos_e2">10</td>
+  </tr>
+  <tr>
+    <td>Clase</td>
+    <td>0</td>
+    <td>0</td>
+    <td>50%</td>
+    <td>0</td>
+    <td class="puntos_c">10</td>
   </tr>
 </table>
  
@@ -73,15 +130,16 @@ obviamente sera mas complejo que los anteriores.</li>
 sobre la calificación final.</li>
   <li>Los puntos de la exposición de un subtema están sujetos a la realización de los proyectos, es decir
 para tener los puntos de una presentación deben haber entregado por lo menos 3 proyectos.</li>
-  <li>El presentar un examen es “opcional”, dependerá del desempeño individual del alumno, si el alumno
+ <!-- <li>El presentar un examen es “opcional”, dependerá del desempeño individual del alumno, si el alumno
 tiene una calificación aprobatoria y esta conforme con ella puede omitir el examen, si no tiene una
 calificación aprobatoria deberá presentar el examen y aprobarlo.</li>
+-->
   <li>La cantidad de putos obtenidos por cada actividad mencionada anteriormente dependerá de la
 calidad de la actividad y de si se cumplió o no con lo requisitos preestablecidos para cada una de ellas.</li>
 </ol>  
  
  
-<table border="1" style="width: 60%; font-size:12px;">
+<table id="calificaciones" border="1" style="width: 80%; font-size:12px;">
   <tr>
     <th>Nombre</th>
     <th>Proyecto 1</th>
@@ -90,198 +148,306 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <th>Proyecto 4</th>
     <th>Proyecto Final</th>
     <th>Presentación</th>
-    <th>Examen</th>
+    <th>Examen 1</th>
+    <th>Examen 2</th>
     <th>Puntos</th>
+    <th>U1</th>
+    <th>U2</th>
+    <th>U3</th>
+    <th>U4</th>
     <th>Total</th>
   </tr>
   <tr>
     <td class="nombre"><a href="https://github.com/AlxPadilla/AlexPadilla">Alex Padilla</a></td>
+    <td class="cal">0</td>
+    <td class="cal">4</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">2.5</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td>NA</td>
+    <td>.225</td>
     <td>0</td>
     <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td class="total">0</td>
+    <td class="total">6.5</td>
   </tr>
   <tr>
     <td class="nombre"><a href="https://github.com/AxelLinan/AutomatasII">Axel Liñan</a></td>
-    <td>8</td>
+    <td class="cal">8</td>
+    <td class="cal">12</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">12</td>
+    <td class="cal">6</td>
+    <td class="cal">0</td>
+    <td class="cal">1</td>
+    <td>.4</td>
+    <td>.6</td>
     <td>0</td>
     <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>12</td>
-    <td>0</td>
-    <td>1</td>
-   <td class="total">21</td>
+   <td class="total" style="color:green;">39</td>
   </tr><tr>
-    <td class="nombre"><a href="https://github.com/Carlos18Bernal/automatas2">Carlos Bernal </a></td>
+    <td class="nombre"><a href="https://github.com/Carlos18Bernal/automatas2">Carlos Enrique Bernal Araujo</a></td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">4</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td>NA</td>
+    <td>.2</td>
     <td>0</td>
     <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
- <td>0</td>
-    <td class="total">0</td>
-  </tr><tr>
-    <td class="nombre"><a href="https://github.com/carliro1996/Evidencias">Carlos Martinez Mendoza</a></td>
-    <td>7</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>12</td>
-    <td>0</td>
- <td>1</td>
-    <td class="total">20</td>
-  </tr><tr>
-    <td class="nombre"><a href="https://github.com/DiegoSalvador21/Proyecto1">Diego Fernandez</a></td>
-    <td>7</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
- <td>0</td>
-    <td class="total">7</td>
-  </tr><tr>
-    <td class="nombre"><a href="https://github.com/EliudCarranza96/Automatas-II/">Eliud Carranza </a></td>
-    <td>7</td>
-    <td>0</td>
-    <td>0</td>
-     <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
- <td>0</td>
-    <td class="total">7</td>
-  </tr><tr>
-    <td class="nombre"><a href="https://github.com/GasparCruzM/Automatas-II.git">Gaspar Cruz</a></td>
-    <td>7</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
- <td>0</td>
-    <td class="total">7</td>
-  </tr><tr>
-    <td class="nombre"><a href="https://github.com/ChristiamIvan/automatasII.git">Ivan Rdz</a></td>
-    <td>4</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
- <td>0</td>
     <td class="total">4</td>
   </tr><tr>
-    <td class="nombre"><a href="https://github.com/adrexteria/automatas2">Jesus Adrian</a></td>
+    <td class="nombre"><a href="https://github.com/carliro1996/Evidencias">Carlos Alberto Martinez Mendoza</a></td>
+    <td class="cal">7</td>
+    <td class="cal">14</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">12</td>
+    <td class="cal">4.5</td>
+    <td class="cal">0</td>
+    <td class="cal">1</td>
+    <td>.35</td>
+    <td>.575</td>
     <td>0</td>
     <td>0</td>
-    <td>0</td>
-     <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
- <td>0</td>
-    <td class="total">0</td>
+    <td class="total" style="color:green;">38.5</td>
   </tr><tr>
-    <td class="nombre"><a href="https://github.com/JulioGarcia69/Lenguajes-Automatas-II">Julio García</a></td>
-    <td>8</td>
+    <td class="nombre"><a href="https://github.com/DiegoSalvador21/Proyecto1">Diego Salvador Fernandez Garcia</a></td>
+    <td class="cal">7</td>
+    <td class="cal">7</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">3.5</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td>.35</td>
+    <td>.35</td>
     <td>0</td>
-     <td>0</td>
     <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
- <td>0</td>
-    <td class="total">8</td>
+    <td class="total">17.5</td>
   </tr><tr>
-    <td class="nombre"><a href="https://github.com/trolluiz/LenguajesAutomatasII.git">Luis Dominguez</a></td>
-    <td>17</td>
+    <td class="nombre"><a href="https://github.com/EliudCarranza96/Automatas-II/">Salvador Eliud Carranza de la Rosa</a></td>
+    <td class="cal">7</td>
+    <td class="cal">9</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">6</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td>.35</td>
+    <td>.525</td>
     <td>0</td>
     <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>12</td>
-    <td>0</td>
- <td>0</td>
-    <td class="total">29</td>
+    <td class="total" style="color: #ef9a10 ;">22</td>
   </tr><tr>
-    <td class="nombre"><a href="https://github.com/Yukippo/LenguajesyAutomatas-II.git">Magaly Leija</a></td>
-    <td>17</td>
+    <td class="nombre"><a href="https://github.com/GasparCruzM/Automatas-II.git">Gaspar Cruz Melendres</a></td>
+    <td class="cal">7</td>
+    <td class="cal">6</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">4</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td>.35</td>
+    <td>.35</td>
     <td>0</td>
     <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>12</td>
-    <td>0</td>
- <td>0</td>
-    <td class="total">29</td>
+    <td  id="total7" class="total">17</td>
   </tr><tr>
-    <td class="nombre"><a href="https://github.com/MarioUriegas/Automatas-II">Mario Humberto Uriegas</a></td>
-    <td>8</td>
+    <td class="nombre"><a href="https://github.com/ChristiamIvan/automatasII.git">Christiam Ivan Rodriguez Moreno</a></td>
+    <td class="cal">4</td>
+    <td class="cal">4</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">3.5</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td>.2</td>
+    <td>.275</td>
     <td>0</td>
     <td>0</td>
-     <td>0</td>
-    <td>0</td>
-    <td>12</td>
-    <td>0</td>
- <td>0</td>
-    <td class="total">20</td>
+    <td  id="total8" class="total">11.5</td>
   </tr><tr>
-    <td class="nombre"><a href="https://github.com/MauTamez11/Proyecto1">Mauricio Tamez</a></td>
-    <td>7</td>
+    <td class="nombre"><a href="https://github.com/EriRdz">Erika Marlen Rodriguez Niño</a></td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">1.5</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td>NA</td>
+    <td>NA</td>
     <td>0</td>
-     <td>0</td>
     <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
- <td>0</td>
-    <td class="total">7</td>
+    <td  id="total9" class="total">1.5</td>
   </tr><tr>
-    <td class="nombre"><a href="https://github.com/MidoriyaD/LenguajeyAutomatas2">Rafa Salazar</a></td>
-    <td>8</td>
+    <td class="nombre"><a href="https://github.com/JulioGarcia69/Lenguajes-Automatas-II">Julio Cesar García Hernandez</a></td>
+    <td class="cal">8</td>
+    <td class="cal">6</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">1.5</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td>.4</td>
+    <td>.225</td>
     <td>0</td>
     <td>0</td>
-     <td>0</td>
-    <td>0</td>
-    <td>12</td>
-    <td>0</td>
- <td>0</td>
-    <td class="total">20</td>
+    <td  id="total10" class="total">15.5</td>
   </tr><tr>
-    <td class="nombre"><a href="https://github.com/Sarahisanchez/Automatas-II.git">Sarahi Sanchez</a></td>
-    <td>7</td>
-     <td>0</td>
+    <td class="nombre"><a href="https://github.com/trolluiz/LenguajesAutomatasII.git">Luis Fernando Dominguez Perez</a></td>
+    <td class="cal">17</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">12</td>
+    <td class="cal">2</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td>.85</td>
+    <td>.10</td>
     <td>0</td>
     <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
- <td>0</td>
-    <td class="total">7</td>
+    <td  id="total11" class="total" style="color:#efc610;">31</td>
   </tr><tr>
-    <td class="nombre"><a href="https://github.com/nadyalerma/automatas-2">Nadya Hinojosa</a></td>
-    <td>8</td>
+    <td class="nombre"><a href="https://github.com/Yukippo/LenguajesyAutomatas-II.git">Magaly Guadalupe Leija Sanchez</a></td>
+    <td class="cal">17</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">12</td>
+    <td class="cal">2</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td>.85</td>
+    <td>.10</td>
     <td>0</td>
-     <td>0</td>
+    <td>0</td>
+    <td  id="total12" class="total" style="color: #efc610;">31</td>
+  </tr><tr>
+    <td class="nombre"><a href="https://github.com/MarioUriegas/Automatas-II">Mario Humberto Uriegas de Leon</a></td>
+    <td class="cal">8</td>
+    <td class="cal">7</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">12</td>
+    <td class="cal">7</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td>.4</td>
+    <td>.3675</td>
     <td>0</td>
     <td>0</td>
+    <td  id="total13" class="total" style="color:#efc610;">34</td>
+  </tr><tr>
+    <td class="nombre"><a href="https://github.com/MauTamez11/Proyecto1">Mauricio Tamez Botello</a></td>
+    <td class="cal">7</td>
+    <td class="cal">5</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">4.5</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td>.35</td>
+    <td>.35</td>
     <td>0</td>
     <td>0</td>
- <td>0</td>
-    <td class="total">8</td>
+    <td  id="total14" class="total">11.5</td>
+  </tr><tr>
+    <td class="nombre"><a href="https://github.com/MidoriyaD/LenguajeyAutomatas2">Rafael Salazar Rodriguez</a></td>
+    <td class="cal">8</td>
+    <td class="cal">6</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">12</td>
+    <td class="cal">3</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td>.4</td>
+    <td>.3</td>
+    <td>0</td>
+    <td>0</td>
+    <td  id="total15" class="total" style="color:#efc610;">29</td>
+  </tr><tr>
+    <td class="nombre"><a href="https://github.com/Sarahisanchez/Automatas-II.git">Alondra Sarahi Sanchez Saucedo</a></td>
+    <td class="cal">7</td>
+    <td class="cal">6</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">1</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td>.35</td>
+    <td>.20</td>
+    <td>0</td>
+    <td>0</td>
+    <td  id="total16" class="total">14</td>
+  </tr>
+  <tr>
+    <td class="nombre"><a href="https://github.com/nadyalerma/automatas-2">Nadya Lucía Hinojosa Lerma</a></td>
+    <td class="cal">8</td>
+    <td class="cal">5</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">4.5</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td>.4</td>
+    <td>.35</td>
+    <td>0</td>
+    <td>0</td>
+    <td  id="total17" class="total">17.5</td>
+  </tr>
+  <tr>
+    <td class="nombre"><a href="#">Eduardo Rodriguez Rodriguez</a></td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td class="cal">3.5</td>
+    <td class="cal">0</td>
+    <td class="cal">0</td>
+    <td>NA</td>
+    <td>.175</td>
+    <td>0</td>
+    <td>0</td>
+    <td  id="total18" class="total">3.5</td>
   </tr>
 </table>
 
