@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Mukta+Mahee" rel="stylesheet"> 
+  <style>
+  body{
+    background-color: #e0e0d1;
+  }
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 5px;
+    text-align: left;    
+  }
+    body{
+      font-family: 'Mukta Mahee', sans-serif;
+    }
+</style>
+  </head>
+<body>
+<div style="width:100%; height: 15%; background-color:#4d0000; position:absolute;">
+<h1 style="margin-left:3%; color:white;">Lenguajes y Automatas II</h1> 
+</div>
+<div style=" margin-left:3%; margin-right:3%; width:100%; margin-top:10%;">
+<h2>Material de la Clase</h2>
+  <h4>Análisis Semántico</h4>
+    <ol>
+      <li>Partes Sintácticas de un analizador Semántico</li>
+      <li>Comprobacion de Tipos</li>
+      <li>Pila Semántica</li>
+      <li>Esquema de Traducción</li>
+      <li>Tabla de Simbolos</li>
+      <li>Manejo de Errores Semánticos</li>
+    </ol> 
+
+  <h4>Generación de Código intermedio</h4>
+    <ol>
+      <li>Notaciones</li>
+        <ul>
+          <li>Prefija</li>
+          <li>Infija</li>
+          <li>Postfija</li>
+        </ul>
+      <li>Representaciones de código intermedio</li>
+        <ul>
+          <li>Notacion Polaca</li>
+          <li>Codigo P</li>
+          <li>Triplos</li>
+          <li>Cuadruplos</li>
+        </ul>
+      <li><a href="esquemas_generacion.html">Esquema de generación</a></li>
+       <ul>
+          <li>Variables y constantes</li>
+          <li>Expresiones</li>
+          <li>Instrucciones de Asignación</li>
+          <li>Instrucciones de Control</li>
+          <li>Funciones</li>
+          <li>Estructuras</li>
+        </ul>
+    </ol>
+
+  <h4>Optimización</h4>
+   <ol>
+     <li>Tipos de optimización</li>
+          <ul>
+          <li>Locales</li>
+          <li>Ciclos</li>
+          <li>Globales</li>
+          <li>De mirilla</li>
+        </ul>
+     <li>Costos</li>
+     <ul>
+          <li>Costo de ejecución (memoria, registros, pilas)</li>
+          <li>Criterios para mejorar el código</li>
+          <li>Herramientas para el análisis del flujo de datos</li>
+        </ul>
+  </ol> 
+  
+  <h4>Generación de código Objeto</h4>
+   <ol>
+     <li>Registros</li>
+     <li>Lenguaje ensamblador</li>
+     <li>Lenguaje máquina</li>
+     <li>Administración de memoria</li>
+  </ol> 
+<h2>Material Extra</h2>
+<ol>
+  <li> <a href="#"> Recordatorio de Lenguajes y Automatas I </a></li>
+  <li> <a href="#"> Complejidad Computacional </a></li>
+  <li> <a href="#"> Latex </a></li>
+  <li> <a href="#java"> Java </a></li>
+</ol> 
+
+  
+<h2>Proyectos</h2>
+<ol>
+  <li> <a href="proyecto1.html"> Arbol de Expresiones </a></li>
+  <li> <a href="proyecto2.html"> Notación </a></li>
+  <li> <a href="proyecto3.html"> Optimización </a></li>
+  <li> <a href="proyecto4.html"> Generación de código Objeto</a></li>
+  <li> <a href="proyecto_final.html"> Proyecto Final </a></li>
+  <li> <a href="evaluacion.html"> Calificaciones </a></li>
+  <li> <a href="#"> Bibliografía </a></li>
+</ol> 
+
+
+<a name="java">
+  <div id="java">
+    <h3>Declaración y asignación de variables</h3>
+    <p>No es lo mismo declarar que asignar una variable, cuando se declara no se le asigna un valor a la variable en cuestion por lo que si imprimieramos esa variable, imprimiriamos el valor por defecto de cada tipo de dato.</p>
+    <div style="width:45%; margin-left:5%; background-color:black; color:white; font-size:14px;">
+      <h4>Ejemplo de Declaración:</h4>
+      <pre>
+          int x;
+          double y;
+          String z;
+          char a;
+          boolean c;
+      </pre>
+    </div>
+
+    <p>Si una variable ya fue declarada se le puede asignar un valor, también se puede declarar y asignar un valor al mismo tiempo, pero si la variable ya fue declarada no se puede declarar y asignar.</p>
+    <div style="width:45%; margin-left:5%; background-color:black; color:white; font-size:14px;">
+      <h4>Ejemplo de asignación de variables ya declaradas:</h4>
+      <pre>
+          x = 1;
+          y = 3.7;
+          z = "test";
+          a = 'r';
+          c = true;
+      </pre>
+    </div>
+
+    <div style="width:45%; margin-left:5%; background-color:black; color:white; font-size:14px;">
+      <h4>Ejemplo de asignación de variables ya declaradas:</h4>
+      <pre>
+          int x = 1;
+          double y = 3.7;
+          String z = "test";
+      </pre>
+    </div>
+
+    Esto no se puede hacer
+    <div style="width:45%; margin-left:5%; background-color:black; color:white; font-size:14px;">
+      <pre>
+
+          int x;
+          x = 3;
+          int x = 2;
+      </pre>
+    </div>
+
+    <h3>Ciclos</h3>
+    <p>En java se cuenta con 3 tipos de ciclos diferentes cada uno con sus ventajas, el primero será el ciclo 'for'.</p>
+    <div style="width:65%; margin-left:5%; background-color:black; color:white; font-size:14px;">
+      <h4>Ejemplos de ciclo 'for':</h4>
+      <pre>
+          for(Variable iteradora; Condición; Incremento o decremento de variable){
+            Acciones a realizar en cada iteración del ciclo.
+          }
+
+          for(int x = 0; x < 10; x++){
+            System.out.println(x);
+          }
+      </pre>
+    </div>
+    Ciclo 'Do While':
+    <div style="width:65%; margin-left:5%; background-color:black; color:white; font-size:14px;">
+      <h4>Ejemplos de ciclo 'Do While':</h4>
+      <pre>
+          do{
+              Acciones a realizar en cada iteración del ciclo.
+            }while(Condición);
+
+          int x = 0;
+          do{
+              System.out.println(x);
+              x ++;
+            }while(x < 10);      
+      </pre>
+    </div>
+    Ciclo 'While':
+    <div style="width:65%; margin-left:5%; background-color:black; color:white; font-size:14px;">
+      <h4>Ejemplos de ciclo 'While':</h4>
+      <pre>
+          while(Condición){
+              Acciones a realizar en cada iteración del ciclo.
+            }
+
+          int x = 0;
+          while(x < 10){
+              System.out.println(x);
+              x ++;
+            }
+      </pre>
+    </div>
+
+    <h3>Instanciación de Objetos</h3>
+    En java para poder acceder a los atributos o a las funciones o métodos de una clase es necesario crear objetos o instancias de la clase que se desea acceder.
+    Ciclo 'Do While':
+    <div style="width:85%; margin-left:5%; background-color:black; color:white; font-size:14px;">
+      <h4>Ejemplos de instanciación de una clase:</h4>
+      <pre>
+          [Nombre de la clase] [Nombre del objeto] = new [Nombre de la clase](parametro 1,parametro 2,parametro n);
+
+          Humano h = new Humano(35);
+      </pre>
+    </div>
+
+    <h3>Declaración de Funciones</h3>
+    Generalemente las funciones nos ayudan a hacer mas comprensible el codigo cuando se vuelve muy extenso, y nos permite acceder a acciones particulares de una clase, Ejemplo:
+    Si existiera una 'Clase' llamada operaciones la cual tuviera declarada los métodos de suma, resta, multiplicacion, división, seria muy facil acceder a cada una de esos métodos de forma independiente.
+
+    <div style="width:85%; margin-left:5%; background-color:black; color:white; font-size:14px;">
+      
+      <h4>Ejemplos de un método de una clase:</h4>
+      <pre>
+        [Delimitador] [tipo de dato devuelto] [Nombre](parametro 1,parametro 2,parametro n){
+           Acciones a realizar dentro de la función.
+        }
+
+        public void nombre(String nom){
+          System.out.println("hola");
+        }
+      </pre>
+    </div>
+    Un metodo puede tambien regresar un valor o no, en caso de que regrese un valor en 'tipo de dato' debe ser del tipo de dato que se desear regresar, es decir, si es una suma puede regresar un 'int' o 'double' o un tipo de dato numerico y agregar un 'return' al finalizar el método.
+
+    <div style="width:85%; margin-left:5%; background-color:black; color:white; font-size:14px;">
+      <pre>
+        
+        [Delimitador] [tipo de dato devuelto] [Nombre](parametro 1,parametro 2,parametro n){
+          Acciones a realizar dentro de la función.
+        return([elementos a regresar]);
+        }
+
+        public String nombre(String nom){
+          return(nom);
+        }
+      </pre>
+    </div>
+  </div>
+</a>
+
+  <h2>Bibliografia</h2>
+  <ol>
+  <li> Aho Alfred V., U. J. (2007). Compiladores. Principios, técnicas y herramientas (2da. ed.).
+México: Pearson Educación.</li>
+  <li> Alfonseca Moreno, M. (2006). Compiladores e intérpretes: teoría y práctica (1ra ed.). España:
+Pearson/Prentice Hall.</li>
+  <li> Carrión Viramontes, J. E. (2008). Teoría de la computación. México: Limusa.</li>
+  <li> Hopcroft John E., M. R. (2002). Introducción a la Teoría de Autómatas, Lenguajes y
+Computación (2da. ed.). Madrid: Addison-Wesley.</li>
+  <li> Isasi Pedro, M. P. (1997). Lenguajes, gramáticas y autómatas. Un enfoque Práctico. Addison-
+Wesley.</li>
+  <li> Kelley, D. (1995). Teoría de Autómatas y Lenguajes Formales, (1ra. ed.). Madrid: Prentice Hall.</li>
+  <li> Lemone, K. A. (1996). Fundamentos de compiladores: cómo traducir al lenguaje de
+computadora. México D.F.: Compañía Editorial Continental.</li>
+  <li> Martin, J. (2004). Lenguajes formales y teoría de la computación. México: McGraw-Hill /
+Interamericana de México.</li>
+  <li> Ruíz, J. (2009). Compiladores-Teoría e implementación. México: Alfaomega./li>
+  <li> Grune, Dick. (2007). Diseño de compiladores modernos. McGraw-Hill.</li>
+</ol> 
+</div>
+</body>
+</html>
