@@ -5,7 +5,6 @@
   <style>
    body{
    font-family: 'Mukta Mahee', sans-serif;
-      background-color: #e0e0d1;
    }
    td,tr{
     text-align: center;
@@ -14,25 +13,7 @@
     color: red;
     font-weight: bold;
    }
-   
-   a:link {
-    color: #4d0000;
-  }
-/* visited link */
-  a:visited {
-    color: gray;
-  }
-  /* mouse over link */
-  a:hover {
-    color: red;
-  }
-  /* selected link */
-  a:active {
-    color: blue;
-  }
 </style>
-  
-  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
 <script type="text/javascript">
 $(document).ready(function () {
@@ -140,9 +121,9 @@ $(document).ready(function () {
 <h2>Notas</h2>
 
 <ol>
-  <li>En los proyectos 1 y 2 se debe realizara una actividad codificada en algún lenguaje de programación para cubrir 
-   aspectos de la unidad en curso, se deberá subir a un repositorio el código generado y entregar un reporte en PDF para 
-   tener derecho a una evaluación.</li>
+  <li>Los proyectos del 1-4 corresponden a cada unidad, en el cual se realizara una actividad codificada en
+algún lenguaje de programación para cubrir aspectos de la unidad en curso, se deberá subir a un
+repositorio el código generado y entregar un reporte en PDF para tener derecho a una evaluación.</li>
   <li>El proyecto integrador al igual que los proyectos anteriores constara de un reporte y código,
 obviamente sera mas complejo que los anteriores.</li>
   <li>Se debe participar en la exposición de un subtema al menos, de lo contrario serán 10 puntos menos
@@ -157,6 +138,22 @@ calificación aprobatoria deberá presentar el examen y aprobarlo.</li>
 calidad de la actividad y de si se cumplió o no con lo requisitos preestablecidos para cada una de ellas.</li>
 </ol>  
  
+ <table id="calificaciones"  style="width: 20%; font-size:12px; border-bottom: 1px solid;">
+    <tr>
+    <th>No Aprobado</th>
+    <th>Mal</th>
+    <th>Medio</th>
+    <th>Bien</th>
+    <th>Aprobado</th>
+    </tr>
+    <tr>
+    <td style="background-color:red;">-</td>
+    <td style="background-color:#ef9a10;">-</td>
+    <td style="background-color:#efc610;">-</td>
+    <td style="background-color:#8cff66;">-</td>
+    <td style="background-color:green;">-</td>
+    </tr>
+ </table>
  
 <table id="calificaciones" border="1" style="width: 80%; font-size:12px;">
   <tr>
@@ -180,7 +177,7 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td class="nombre"><a href="https://github.com/AlxPadilla/AlexPadilla">Alex Padilla</a></td>
     <td class="cal">0</td>
     <td class="cal">4</td>
-    <td class="cal">0</td>
+    <td class="cal">4</td>
     <td class="cal">0</td>
     <td class="cal">0</td>
     <td class="cal">0</td>
@@ -197,7 +194,7 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td class="nombre"><a href="https://github.com/AxelLinan/AutomatasII">Axel Liñan</a></td>
     <td class="cal">8</td>
     <td class="cal">12</td>
-    <td class="cal">0</td>
+    <td class="cal">9</td>
     <td class="cal">0</td>
     <td class="cal">0</td>
     <td class="cal">12</td>
@@ -229,7 +226,7 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td class="nombre"><a href="https://github.com/carliro1996/Evidencias">Carlos Alberto Martinez Mendoza</a></td>
     <td class="cal">7</td>
     <td class="cal">14</td>
-    <td class="cal">0</td>
+    <td class="cal">8.5</td>
     <td class="cal">0</td>
     <td class="cal">0</td>
     <td class="cal">12</td>
@@ -261,7 +258,7 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td class="nombre"><a href="https://github.com/EliudCarranza96/Automatas-II/">Salvador Eliud Carranza de la Rosa</a></td>
     <td class="cal">7</td>
     <td class="cal">9</td>
-    <td class="cal">0</td>
+    <td class="cal">10</td>
     <td class="cal">0</td>
     <td class="cal">0</td>
     <td class="cal">0</td>
@@ -272,7 +269,7 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td>.525</td>
     <td>0</td>
     <td>0</td>
-    <td class="total" style="color: #ef9a10 ;">22</td>
+    <td class="total" style="color: #efc610 ;">22</td>
   </tr><tr>
     <td class="nombre"><a href="https://github.com/GasparCruzM/Automatas-II.git">Gaspar Cruz Melendres</a></td>
     <td class="cal">7</td>
@@ -325,7 +322,7 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td class="nombre"><a href="https://github.com/JulioGarcia69/Lenguajes-Automatas-II">Julio Cesar García Hernandez</a></td>
     <td class="cal">8</td>
     <td class="cal">6</td>
-    <td class="cal">0</td>
+    <td class="cal">9</td>
     <td class="cal">0</td>
     <td class="cal">0</td>
     <td class="cal">0</td>
@@ -336,12 +333,12 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td>.225</td>
     <td>0</td>
     <td>0</td>
-    <td  id="total10" class="total">15.5</td>
+    <td  id="total10" class="total" style="color:#ef9a10;">15.5</td>
   </tr><tr>
     <td class="nombre"><a href="https://github.com/trolluiz/LenguajesAutomatasII.git">Luis Fernando Dominguez Perez</a></td>
     <td class="cal">17</td>
     <td class="cal">0</td>
-    <td class="cal">0</td>
+    <td class="cal">4</td>
     <td class="cal">0</td>
     <td class="cal">0</td>
     <td class="cal">12</td>
@@ -357,7 +354,7 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td class="nombre"><a href="https://github.com/Yukippo/LenguajesyAutomatas-II.git">Magaly Guadalupe Leija Sanchez</a></td>
     <td class="cal">17</td>
     <td class="cal">0</td>
-    <td class="cal">0</td>
+    <td class="cal">10</td>
     <td class="cal">0</td>
     <td class="cal">0</td>
     <td class="cal">12</td>
@@ -368,12 +365,12 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td>.10</td>
     <td>0</td>
     <td>0</td>
-    <td  id="total12" class="total" style="color: #efc610;">31</td>
+    <td  id="total12" class="total" style="color: #8cff66;">31</td>
   </tr><tr>
     <td class="nombre"><a href="https://github.com/MarioUriegas/Automatas-II">Mario Humberto Uriegas de Leon</a></td>
     <td class="cal">8</td>
     <td class="cal">7</td>
-    <td class="cal">0</td>
+    <td class="cal">10</td>
     <td class="cal">0</td>
     <td class="cal">0</td>
     <td class="cal">12</td>
@@ -384,12 +381,12 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td>.3675</td>
     <td>0</td>
     <td>0</td>
-    <td  id="total13" class="total" style="color:#efc610;">34</td>
+    <td  id="total13" class="total" style="color:#8cff66;">34</td>
   </tr><tr>
     <td class="nombre"><a href="https://github.com/MauTamez11/Proyecto1">Mauricio Tamez Botello</a></td>
     <td class="cal">7</td>
     <td class="cal">5</td>
-    <td class="cal">0</td>
+    <td class="cal">4</td>
     <td class="cal">0</td>
     <td class="cal">0</td>
     <td class="cal">0</td>
@@ -400,12 +397,12 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td>.35</td>
     <td>0</td>
     <td>0</td>
-    <td  id="total14" class="total">11.5</td>
+    <td  id="total14" class="total" style="color:#ef9a10;">11.5</td>
   </tr><tr>
     <td class="nombre"><a href="https://github.com/MidoriyaD/LenguajeyAutomatas2">Rafael Salazar Rodriguez</a></td>
     <td class="cal">8</td>
     <td class="cal">6</td>
-    <td class="cal">0</td>
+    <td class="cal">9</td>
     <td class="cal">0</td>
     <td class="cal">0</td>
     <td class="cal">12</td>
@@ -421,7 +418,7 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td class="nombre"><a href="https://github.com/Sarahisanchez/Automatas-II.git">Alondra Sarahi Sanchez Saucedo</a></td>
     <td class="cal">7</td>
     <td class="cal">6</td>
-    <td class="cal">0</td>
+    <td class="cal">4</td>
     <td class="cal">0</td>
     <td class="cal">0</td>
     <td class="cal">0</td>
@@ -438,7 +435,7 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td class="nombre"><a href="https://github.com/nadyalerma/automatas-2">Nadya Lucía Hinojosa Lerma</a></td>
     <td class="cal">8</td>
     <td class="cal">5</td>
-    <td class="cal">0</td>
+    <td class="cal">10</td>
     <td class="cal">0</td>
     <td class="cal">0</td>
     <td class="cal">0</td>
@@ -449,7 +446,7 @@ calidad de la actividad y de si se cumplió o no con lo requisitos preestablecid
     <td>.35</td>
     <td>0</td>
     <td>0</td>
-    <td  id="total17" class="total">17.5</td>
+    <td  id="total17" class="total" style="color:#ef9a10;">17.5</td>
   </tr>
   <tr>
     <td class="nombre"><a href="#">Eduardo Rodriguez Rodriguez</a></td>
